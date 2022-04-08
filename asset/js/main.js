@@ -14,7 +14,10 @@ var app = new Vue(
 
                 let singleEmail = res.data.response;
                 
-                return this.mails.push(singleEmail);
+                if (!this.mails.includes(singleEmail)) {
+                    this.mails.push(singleEmail)
+                }
+
             })     
         }
 
